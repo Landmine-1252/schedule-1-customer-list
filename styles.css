@@ -3,6 +3,7 @@
 /* Light/Dark mode support */
 :root:not([data-theme="dark"]) {
   --primary: #7952b3;
+  --primary-rgb: 121, 82, 179;
   --primary-hover: #6742a3;
   --primary-focus: rgba(121, 82, 179, 0.125);
   --primary-inverse: #FFF;
@@ -21,6 +22,7 @@
 
 :root[data-theme="dark"] {
   --primary: #9e75e0;
+  --primary-rgb: 158, 117, 224;
   --primary-hover: #b08fe9;
   --primary-focus: rgba(158, 117, 224, 0.25);
   --primary-inverse: #FFF;
@@ -517,6 +519,14 @@ main {
   flex: 1;
 }
 
+.checkbox-item-disabled {
+  opacity: 0.45;
+}
+
+.checkbox-item-disabled label {
+  cursor: not-allowed;
+}
+
 /* Style for the colored span in favorites */
 .checkbox-item label .favorite-text {
   overflow: hidden;
@@ -675,6 +685,7 @@ main {
   margin-bottom: 1rem;
   padding: 0.5rem;
   background-color: rgba(var(--primary-rgb), 0.1);
+  border-left: 3px solid var(--primary);
   border-radius: var(--border-radius);
 }
 
@@ -711,6 +722,11 @@ main {
   color: #d32f2f;
   border: 1px solid rgba(255, 0, 0, 0.2);
   border-radius: var(--border-radius);
+}
+
+.muted-note {
+  color: var(--muted-color);
+  font-size: 0.95rem;
 }
 
 @keyframes pulse {

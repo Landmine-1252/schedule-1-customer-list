@@ -31,7 +31,7 @@ This tool helps you determine the minimum set of favorites needed to satisfy at 
 
 ## Setup
 
-For best results, run the application using a local web server. This ensures that JSON files load correctly:
+This project is a static site intended for GitHub Pages. For local testing, run it with a simple web server so the JSON files load correctly:
 
 ### Using Python (Recommended)
 
@@ -50,6 +50,16 @@ For best results, run the application using a local web server. This ensures tha
 
 Simply opening `index.html` directly in a browser may not work properly due to browser security restrictions preventing JSON files from loading when using the `file://` protocol.
 
+## Validation
+
+Run the built-in validation script before publishing changes:
+
+```bash
+node scripts/validate-project.js
+```
+
+It checks the JSON structure, verifies that every favorite has a color, and confirms that `index.html` still references the expected page elements and `app.js`.
+
 ## Data Structure
 
 The application uses two JSON files:
@@ -59,4 +69,4 @@ The application uses two JSON files:
 
 ## Repository
 
-<https://github.com/Landmine-1252/schedule-1-contact-list>
+<https://github.com/Landmine-1252/schedule-1-customer-list>
